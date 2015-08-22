@@ -7,13 +7,16 @@ shinyUI(pageWithSidebar(
     numericInput("text3", "Input Petal Length (range: 1.0cm to 6.9cm)", 4.35, min = 1.0, max = 6.9, step = 0.1),
     numericInput("text4", "Input Sepal Width (range: 0.1cm to 2.5cm)", 1.3, min = 0.1, max = 2.5, step = 0.1),
     actionButton("goButton", "Predict Species!")
+ #   submitButton('Predict Species!')
   ),
   mainPanel(
     p('This app allows you to predict the species of of iris by giving as 
       input four measurements viz. Sepal length, Sepal width,Petal Length
-      and Petal Width'),
-    p("The app uses nueral net algorithm to train the model on iris dataset 
-       that comes inbuilt with R"),
+      and Petal Width. The app uses nueral net algorithm to train the model on iris dataset 
+       that comes inbuilt with R.'),
+    p("You can use the below link to the iris dataset to try different 
+      input values."),
+    a("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"),
     p('Sepal Length Entered'),
     verbatimTextOutput('text1'),
     p('Sepal Width Entered'),
